@@ -10,23 +10,34 @@ The main objective is to automate the classification of patient billing accounts
 
 ## How to Run
 
-1. **Install [uv](https://github.com/astral-sh/uv) (fast Python package manager)**
-   ```sh
-   curl -Ls https://astral.sh/uv/install.sh | sh
-   ```
+
+1. **Install [mise](https://mise.jdx.dev) (cross-platform tool manager, drop-in replacement for asdf)**
+   - macOS/Linux/Windows:
+     ```sh
+     curl https://mise.run | sh
+     # or see https://mise.jdx.dev/docs/install for other options
+     ```
+   - The included `.mise.toml` and `.tool-versions` files ensure everyone uses the same version of `uv`.
+   - In the project directory, run:
+     ```sh
+     mise install
+     ```
+
 2. **Install dependencies with uv**
    ```sh
-   uv pip install -r requirements.txt
+   uv sync
    ```
-3. **Set your OpenAI API key**
+
+4. **Set your OpenAI API key**
    - Create a `.env` file in the project root with:
      ```
      OPENAI_API_KEY=your-openai-api-key
      CLASSIFY_ACCOUNT_BATCH_SIZE=batch-size (defaults to 3)
      ```
-4. **Run the main script**
+
+5. **Run the main script**
    ```sh
-   uv pip run python src/main.py
+   uv run python src/main.py
    ```
    This will process all example FHIR bundles in parallel batches and print the AI's classification and summary for each.
 
