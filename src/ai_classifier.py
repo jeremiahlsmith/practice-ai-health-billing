@@ -1,7 +1,9 @@
+
 import json
 import os
 
 import openai
+from jinja2 import Template
 
 
 def openai_client():
@@ -23,19 +25,12 @@ async def classify_account(bundle: dict) -> tuple[str, str]:
         if entry["resource"]["resourceType"] == "Communication"
     ])
 
-    prompt = f"""
-    You are a medical billing expert. Read the following patient communication notes and respond in the following structured JSON format:
 
-    {{
-      "category": "<One of: awaiting_guarantor, payer_pending_response, likely_writeoff, needs_manual_review>"
-      "summary": "<Concise summary of the patient's billing situation in 1-2 sentences>",
-    }}
-
-    Choose the category that best fits the situation based on the notes. If unsure, use "needs_manual_review".
-
-    Patient Communication Notes:
-    {notes}
-    """
+    # Load the Jinja2 template from file
+    with open(os.path.join(os.path.dirname(__file__), "prompt_template_classify_account.jinja2")) as f:
+        template_str = f.read()
+    prompt_classify_account = Template(template_str)
+    prompt = prompt_classify_account.render(notes=notes)
 
     response = await openai_client().chat.completions.create(
         model="gpt-4",
