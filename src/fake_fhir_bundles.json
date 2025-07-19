@@ -1,0 +1,192 @@
+[
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm1",
+          "text": {
+            "status": "generated",
+            "div": "<div>Patient called to ask about bill. Explained insurance is pending.</div>"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm2",
+          "text": {
+            "status": "generated",
+            "div": "<div>Insurance company contacted, awaiting response.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm3",
+          "text": {
+            "status": "generated",
+            "div": "<div>Guarantor has not responded to last statement.</div>"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm4",
+          "text": {
+            "status": "generated",
+            "div": "<div>Sent follow-up letter to guarantor.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm5",
+          "text": {
+            "status": "generated",
+            "div": "<div>Account likely to be written off due to non-payment.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm6",
+          "text": {
+            "status": "generated",
+            "div": "<div>Manual review required for unusual insurance code.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm7",
+          "text": {
+            "status": "generated",
+            "div": "<div>Patient provided new insurance information.</div>"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm8",
+          "text": {
+            "status": "generated",
+            "div": "<div>Insurance verification in progress.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm9",
+          "text": {
+            "status": "generated",
+            "div": "<div>Guarantor disputed charges, awaiting documentation.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm10",
+          "text": {
+            "status": "generated",
+            "div": "<div>Insurance denied claim, appeal submitted.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm11",
+          "text": {
+            "status": "generated",
+            "div": "<div>Patient requested payment plan.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm12",
+          "text": {
+            "status": "generated",
+            "div": "<div>Account sent to collections.</div>"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Communication",
+          "id": "comm13",
+          "text": {
+            "status": "generated",
+            "div": "<div>Payment received in full, account closed.</div>"
+          }
+        }
+      }
+    ]
+  }
+]
