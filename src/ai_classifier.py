@@ -7,7 +7,7 @@ import openai
 from jinja2 import Environment, FileSystemLoader
 
 env = Environment(loader=FileSystemLoader("src/prompts"))
-template = env.get_template("classify_account.jinja")
+template = env.get_template("classify_account.j2")
 
 
 def openai_client():
@@ -31,14 +31,6 @@ def build_prompt(bundle: dict) -> str:
 
 
 async def classify_account(bundle: dict) -> tuple[str, str]:
-
-    # Extract only the essential text: the inner text from each Communication's div, stripped of HTML tags
-
-    # Load the Jinja2 template from file-
-    # TODO: Change to use jinja2.FileSystemLoader if you want to load from a specific directory
-
-    # with open(os.path.join(os.path.dirname(__file__), "prompt_template_classify_account.jinja2")) as f:
-    #     template_str = f.read()
     prompt = build_prompt(bundle)
     response = await openai_client().chat.completions.create(
         model="gpt-4",
