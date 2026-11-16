@@ -33,7 +33,7 @@ def build_prompt(bundle: dict) -> str:
 async def classify_account(bundle: dict) -> tuple[str, str]:
     prompt = build_prompt(bundle)
     response = await openai_client().chat.completions.create(
-        model="gpt-4",
+        model=os.getenv("OPENAI_MODEL", "gpt-4"),
         messages=[{"role": "user", "content": prompt}]
     )
     output = response.choices[0].message.content
